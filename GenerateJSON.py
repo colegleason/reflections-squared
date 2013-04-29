@@ -12,7 +12,7 @@ def main():
 	sheet = wb.get_sheet_by_name('Raw Data')
 	for row in sheet.rows:
 		year_value = row[0].value
-		if year_value != None:
+		if year_value != None and year_value != 'year':
 			if year_value not in years:
 				years[year_value] = blank_year()
 			parse_row(row, years[year_value],speaker_years)

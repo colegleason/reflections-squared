@@ -800,9 +800,6 @@
         ], 
         "Zed Shaw": [
             2012
-        ], 
-        "name": [
-            "year"
         ]
     }, 
     "years": {
@@ -6301,35 +6298,6 @@
                     "sex": "M", 
                     "talks": [
                         "Gaming Q&A"
-                    ]
-                }
-            ]
-        }, 
-        "year": {
-            "attendees": 0, 
-            "events": [
-                {
-                    "abstract": "talk abstract", 
-                    "speakers": [
-                        "name"
-                    ], 
-                    "title": "talk title", 
-                    "topic": [
-                        "talk subject", 
-                        "talk subject 2", 
-                        "talk subject 3"
-                    ]
-                }
-            ], 
-            "speakers": [
-                {
-                    "affiliation": "affiliation", 
-                    "degree": "degree", 
-                    "degree_from": "degree from", 
-                    "name": "name", 
-                    "sex": "gender", 
-                    "talks": [
-                        "talk title"
                     ]
                 }
             ]
