@@ -1,5 +1,5 @@
 function load_speakers() {
-    d3.json("speakers.json", function(error, json) {
+    d3.json("data.json", function(error, json) {
         if (error) return console.warn(error);
         var data = json;
         var content = d3.select("#content");
@@ -10,36 +10,37 @@ function load_speakers() {
 function collapse_speakers(years) {
     var speakers = [];
     for (var year in years) {
-        speakers.concat(year.events);
+        speakers = speakers.concat(years[year].speakers);
     }
+    return speakers;
 }
 
 function top_affiliations(root, years, number) {
     var affiliations = {};
-    for (var year in years) {
-        for (var speaker in year) {
-            if (affiliations.hasOwnPropery(speaker.affiliation)) {
-                affiliations[speaker.affiliation]++;
-            } else {
-                affiliations[speaker.affiliation] = 1;
-            }
+    var speakers = collapse_speakers(years);
+    speakers.forEach(function(speaker) {
+        if (affiliations.hasOwnProperty(speaker.affiliation)) {
+            affiliations[speaker.affiliation]++;
+        } else {
+            affiliations[speaker.affiliation] = 1;
         }
-    }
+    });
 
     var data = [];
     for (var key in affiliations) {
         var count = affiliations[key];
-        data.push({name:key, count: count})
+        data.push({name: key, count: count})
     }
-    // this funciton is not complete
 
-    console.log(data);
-    var graph = root.append("div").append("ol");
+    data.sort(function (a, b) { return b.count - a.count; });
+
+    var graph = root.append("div")
+        .attr("id", "affiliations")
+        .append("ol");
 
     graph.selectAll("li")
         .data(data)
         .enter()
         .append("li")
-        .text(function(d) { return d.name + d.count})
-
+        .text(function(d) { return d.name + " " + d.count})
 }
