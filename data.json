@@ -4192,9 +4192,9 @@
                     "speakers": [
                         "Owen Byrne"
                     ], 
-                    "title": "SOMETIMES YOU JUST HAVE TO STAY OUT OF THE WAY...CREATIVELY", 
+                    "title": "Sometimes You Just Have to Stay Out of the Way ... Creatively", 
                     "topic": [
-                        "Startup Lessons", 
+                        "Entrepreneurship", 
                         "Internet"
                     ]
                 }, 
@@ -4203,7 +4203,7 @@
                     "speakers": [
                         "Cass Everitt"
                     ], 
-                    "title": "REAL TIME RENDERING - STATE OF THE ART", 
+                    "title": "Real Time Rendering - State of the Art", 
                     "topic": [
                         "Graphics"
                     ]
@@ -4214,9 +4214,10 @@
                         "Phil Foglio", 
                         "Kaja Foglio"
                     ], 
-                    "title": "\"I CAN HAZ MONEY NOW?\" SUCCESSFULLY REENGINEERING TRADITIONAL COMIC PUBLISHING FOR THE WEB", 
+                    "title": "\"I Can Haz Money Now?\" Successfully Reengineering Traditional Comic Publishing for the Web", 
                     "topic": [
-                        "Internet"
+                        "Internet", 
+                        "Web Comic"
                     ]
                 }, 
                 {
@@ -4224,9 +4225,9 @@
                     "speakers": [
                         "Ari Gordon-Schlosberg"
                     ], 
-                    "title": "HUMAN COMPUTER SYMBIOSIS: BUILDING INFORMATION SYSTEMS FROM THE HUMAN PERSPECTIVE", 
+                    "title": "Human Cumputer Symbiosis: Building Information Systems from the Human Perspective", 
                     "topic": [
-                        "Engineering at a Human Scale"
+                        "Human Computer Interaction"
                     ]
                 }, 
                 {
@@ -4234,7 +4235,7 @@
                     "speakers": [
                         "Ron Isaacson"
                     ], 
-                    "title": "PUTTING AFS TO WORK ON WALL STREET", 
+                    "title": "Putting AFS to Work on Wall Street", 
                     "topic": [
                         "Open Source"
                     ]
@@ -4244,7 +4245,7 @@
                     "speakers": [
                         "Joel Jordan"
                     ], 
-                    "title": "MAKING EVERYDAY AUTOMATION EASY AND PRACTICAL", 
+                    "title": "Making Everyday Automation Easy and Practical", 
                     "topic": [
                         "Automation"
                     ]
@@ -4254,7 +4255,7 @@
                     "speakers": [
                         "Gary McGraw"
                     ], 
-                    "title": "EXPLOITING ONLINE GAMES", 
+                    "title": "Exploiting Online Games", 
                     "topic": [
                         "Game Programming"
                     ]
@@ -4264,9 +4265,10 @@
                     "speakers": [
                         "Randall Munroe"
                     ], 
-                    "title": "MEET THE PRESIDENT OF THE INTERNET", 
+                    "title": "Meet the President of the Internet", 
                     "topic": [
-                        "Internet"
+                        "Internet", 
+                        "Web Comic"
                     ]
                 }, 
                 {
@@ -4275,7 +4277,7 @@
                         "Greg Nordstrom", 
                         "David Larson"
                     ], 
-                    "title": "AN OVERVIEW OF THE DESIGN AND FEATURES OF THE IBM POWER\u2122 SYSTEMS HYPERVISOR", 
+                    "title": "An Overview of the Design and Features of the IBM Power Systems Hypervisor", 
                     "topic": [
                         "Computer Architecture"
                     ]
@@ -4285,14 +4287,18 @@
                     "speakers": [
                         "Thomas Ptacek"
                     ], 
-                    "title": "THE ARMS RACE OVER VIRTUALIZATION"
+                    "title": "The Arms Race Over Virtualization", 
+                    "topic": [
+                        "Virtualization", 
+                        "Security"
+                    ]
                 }, 
                 {
                     "abstract": "A programming-language designer makes rules to match what programmers want, whereas a linguist makes rules to match what natural-language speakers do. The same formal tools that relate form to meaning are useful on both sides. To illustrate this link, we discuss how side effects such as mutable state and delimited control interact with quoted expressions. In computer science, this interaction helps us generate faster code more easily. In linguistics, it explains why \"somebody loves everybody\" is ambiguous but \"anybody loves nobody\" makes no sense.", 
                     "speakers": [
                         "Chung-Chieh Shan"
                     ], 
-                    "title": "QUOTING SIDE EFFECTS", 
+                    "title": "Quoting Side Effects", 
                     "topic": [
                         "Programming Languages"
                     ]
@@ -4302,21 +4308,27 @@
                     "speakers": [
                         "Jon Stokes"
                     ], 
-                    "title": "WHY MOST DIGITAL HUMANITIES COMPUTING PROJECTS ARE A WASTE OF TIME, AND HOW TO FIX THE PROBLEM"
+                    "title": "Why Most Digital Humanities Computing Projects are a Waste of Time and How to Fix the Problem", 
+                    "topic": [
+                        "Humanities"
+                    ]
                 }, 
                 {
                     "abstract": "Although virtual machines have been around since the 1960's, they have only recently become widely used on PC-based servers and clients. Today they are commonly used in the datacenter to reduce capital and operational costs. They are also used on the desktop for software development and application compatibility. Fueled by recent advances in processor virtualization technologies, software developers continue to propose new uses for virtual machines. So what's with all the hype? Are virtual machines really the answer to many of today's computing problems? In his talk, Eric Traut will discuss the basic concepts involved in machine virtualization and provide an architectural overview of Microsoft's soon-to-be-released hypervisor. He will also discuss some of the factors that are driving the interest in virtual machines and talk about where virtualization should (and perhaps more importantly, shouldn't) be applied.", 
                     "speakers": [
                         "Eric Traut"
                     ], 
-                    "title": "MACHINE VIRTUALIZATION"
+                    "title": "Machine Virtualization", 
+                    "topic": [
+                        "Virtualization"
+                    ]
                 }, 
                 {
                     "abstract": "Although there have been many interesting experiments, technology investment in the education industry is the lowest of any major industry group. As a result, people are used very inefficiently; school taxes and tuition are becoming progressively more outlandish. But it is not all that easy to figure out where to apply automation in education. We shall try to sort out where people are needed and where machines can be adequate substitutes. We then turn to college-level education, especially in Computer Science. Are textbooks a thing of the past? Does the ability of schools to pipe lectures into the dorms radically change the economics of education? Finally, we shall look at what has been the speaker's personal \"research\" project since retirement: an attempt to automate the sort of homeworks that one normally finds in CS courses.", 
                     "speakers": [
                         "Jeffrey Ullman"
                     ], 
-                    "title": "COMPUTERS AND THE EDUCATION INDUSTRY", 
+                    "title": "Computers and the Education Industry", 
                     "topic": [
                         "Education"
                     ]
@@ -4326,7 +4338,7 @@
                     "speakers": [
                         "Peter Valchev"
                     ], 
-                    "title": "USING OPENBSD SECURITY FEATURES TO FIND SOFTWARE BUGS", 
+                    "title": "Using OpenBSD Features to Find Bugs", 
                     "topic": [
                         "Security"
                     ]
@@ -4336,9 +4348,9 @@
                     "speakers": [
                         "Steve Yegge"
                     ], 
-                    "title": "COMPILING JAVASCRIPT FOR THE JVM", 
+                    "title": "Compiling Javascript for the JVM", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages"
                     ]
                 }
             ], 
@@ -4350,7 +4362,7 @@
                     "name": "Owen Byrne", 
                     "sex": "M", 
                     "talks": [
-                        "SOMETIMES YOU JUST HAVE TO STAY OUT OF THE WAY...CREATIVELY"
+                        "Sometimes You Just Have to Stay Out of the Way ... Creatively"
                     ]
                 }, 
                 {
@@ -4360,7 +4372,7 @@
                     "name": "Cass Everitt", 
                     "sex": "M", 
                     "talks": [
-                        "REAL TIME RENDERING - STATE OF THE ART"
+                        "Real Time Rendering - State of the Art"
                     ]
                 }, 
                 {
@@ -4380,7 +4392,7 @@
                     "name": "Phil Foglio", 
                     "sex": "M", 
                     "talks": [
-                        "\"I CAN HAZ MONEY NOW?\" SUCCESSFULLY REENGINEERING TRADITIONAL COMIC PUBLISHING FOR THE WEB"
+                        "\"I Can Haz Money Now?\" Successfully Reengineering Traditional Comic Publishing for the Web"
                     ]
                 }, 
                 {
@@ -4390,7 +4402,7 @@
                     "name": "Kaja Foglio", 
                     "sex": "F", 
                     "talks": [
-                        "\"I CAN HAZ MONEY NOW?\" SUCCESSFULLY REENGINEERING TRADITIONAL COMIC PUBLISHING FOR THE WEB"
+                        "\"I Can Haz Money Now?\" Successfully Reengineering Traditional Comic Publishing for the Web"
                     ]
                 }, 
                 {
@@ -4400,7 +4412,7 @@
                     "name": "Ari Gordon-Schlosberg", 
                     "sex": "M", 
                     "talks": [
-                        "HUMAN COMPUTER SYMBIOSIS: BUILDING INFORMATION SYSTEMS FROM THE HUMAN PERSPECTIVE"
+                        "Human Cumputer Symbiosis: Building Information Systems from the Human Perspective"
                     ]
                 }, 
                 {
@@ -4410,7 +4422,7 @@
                     "name": "Ron Isaacson", 
                     "sex": "M", 
                     "talks": [
-                        "PUTTING AFS TO WORK ON WALL STREET"
+                        "Putting AFS to Work on Wall Street"
                     ]
                 }, 
                 {
@@ -4420,7 +4432,7 @@
                     "name": "Joel Jordan", 
                     "sex": "M", 
                     "talks": [
-                        "MAKING EVERYDAY AUTOMATION EASY AND PRACTICAL"
+                        "Making Everyday Automation Easy and Practical"
                     ]
                 }, 
                 {
@@ -4430,7 +4442,7 @@
                     "name": "Gary McGraw", 
                     "sex": "M", 
                     "talks": [
-                        "EXPLOITING ONLINE GAMES"
+                        "Exploiting Online Games"
                     ]
                 }, 
                 {
@@ -4440,7 +4452,7 @@
                     "name": "Randall Munroe", 
                     "sex": "M", 
                     "talks": [
-                        "MEET THE PRESIDENT OF THE INTERNET"
+                        "Meet the President of the Internet"
                     ]
                 }, 
                 {
@@ -4450,7 +4462,7 @@
                     "name": "Greg Nordstrom", 
                     "sex": "M", 
                     "talks": [
-                        "AN OVERVIEW OF THE DESIGN AND FEATURES OF THE IBM POWER\u2122 SYSTEMS HYPERVISOR"
+                        "An Overview of the Design and Features of the IBM Power Systems Hypervisor"
                     ]
                 }, 
                 {
@@ -4460,7 +4472,7 @@
                     "name": "David Larson", 
                     "sex": "M", 
                     "talks": [
-                        "AN OVERVIEW OF THE DESIGN AND FEATURES OF THE IBM POWER\u2122 SYSTEMS HYPERVISOR"
+                        "An Overview of the Design and Features of the IBM Power Systems Hypervisor"
                     ]
                 }, 
                 {
@@ -4470,7 +4482,7 @@
                     "name": "Thomas Ptacek", 
                     "sex": "M", 
                     "talks": [
-                        "THE ARMS RACE OVER VIRTUALIZATION"
+                        "The Arms Race Over Virtualization"
                     ]
                 }, 
                 {
@@ -4480,7 +4492,7 @@
                     "name": "Chung-Chieh Shan", 
                     "sex": "M", 
                     "talks": [
-                        "QUOTING SIDE EFFECTS"
+                        "Quoting Side Effects"
                     ]
                 }, 
                 {
@@ -4490,7 +4502,7 @@
                     "name": "Jon Stokes", 
                     "sex": "M", 
                     "talks": [
-                        "WHY MOST DIGITAL HUMANITIES COMPUTING PROJECTS ARE A WASTE OF TIME, AND HOW TO FIX THE PROBLEM"
+                        "Why Most Digital Humanities Computing Projects are a Waste of Time and How to Fix the Problem"
                     ]
                 }, 
                 {
@@ -4500,7 +4512,7 @@
                     "name": "Eric Traut", 
                     "sex": "M", 
                     "talks": [
-                        "MACHINE VIRTUALIZATION"
+                        "Machine Virtualization"
                     ]
                 }, 
                 {
@@ -4510,7 +4522,7 @@
                     "name": "Jeffrey Ullman", 
                     "sex": "M", 
                     "talks": [
-                        "COMPUTERS AND THE EDUCATION INDUSTRY"
+                        "Computers and the Education Industry"
                     ]
                 }, 
                 {
@@ -4520,7 +4532,7 @@
                     "name": "Peter Valchev", 
                     "sex": "M", 
                     "talks": [
-                        "USING OPENBSD SECURITY FEATURES TO FIND SOFTWARE BUGS"
+                        "Using OpenBSD Features to Find Bugs"
                     ]
                 }, 
                 {
@@ -4530,7 +4542,7 @@
                     "name": "Steve Yegge", 
                     "sex": "M", 
                     "talks": [
-                        "COMPILING JAVASCRIPT FOR THE JVM"
+                        "Compiling Javascript for the JVM"
                     ]
                 }
             ]
@@ -4545,7 +4557,8 @@
                     ], 
                     "title": "They make computers out of software, now", 
                     "topic": [
-                        "Computer Architecture"
+                        "Computer Architecture", 
+                        "Systems Programming"
                     ]
                 }, 
                 {
@@ -4555,7 +4568,8 @@
                     ], 
                     "title": "Quantum Computer Compilers", 
                     "topic": [
-                        "Compilers"
+                        "Compilers", 
+                        "Quantum Computing"
                     ]
                 }, 
                 {
@@ -4565,7 +4579,8 @@
                     ], 
                     "title": "ZFS: The Last Word in File Systems", 
                     "topic": [
-                        "Open Source"
+                        "Open Source", 
+                        "File Systems"
                     ]
                 }, 
                 {
@@ -4575,7 +4590,7 @@
                     ], 
                     "title": "Stranger in a Strange Land: Reflections on a Linux Guy's First Year at Microsoft", 
                     "topic": [
-                        "Distributed Systems"
+                        "Operating Systems"
                     ]
                 }, 
                 {
@@ -4605,7 +4620,8 @@
                     ], 
                     "title": "Secure Browsing with the OP Browser", 
                     "topic": [
-                        "Security"
+                        "Security", 
+                        "Internet"
                     ]
                 }, 
                 {
@@ -4625,7 +4641,7 @@
                     ], 
                     "title": "Haskell, static typing, type witnesses and darcs", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -4635,7 +4651,7 @@
                     ], 
                     "title": "Introducing the Q Programming Language", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -4676,7 +4692,7 @@
                     ], 
                     "title": "Keep Your Shoes On", 
                     "topic": [
-                        "Programming", 
+                        "Software Engineering", 
                         "Personal Development"
                     ]
                 }, 
@@ -4697,7 +4713,7 @@
                     ], 
                     "title": "Studies in the Ballistic Arts", 
                     "topic": [
-                        "Programming"
+                        "Software Engineering"
                     ]
                 }
             ], 
@@ -4895,7 +4911,7 @@
                     ], 
                     "title": "How Microsoft Is Different from School", 
                     "topic": [
-                        "Professionalism"
+                        "Software Engineering"
                     ]
                 }, 
                 {
@@ -4916,7 +4932,7 @@
                     ], 
                     "title": "Javascript: The Good Parts", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -4946,7 +4962,7 @@
                     ], 
                     "title": "Python for Programmers", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -4956,7 +4972,7 @@
                     ], 
                     "title": "Zimbu, an experimental programming language", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -4976,7 +4992,7 @@
                     ], 
                     "title": "Standards Deviation: running Ruby on Rails inside the worlds largest PHP shop", 
                     "topic": [
-                        "Programming", 
+                        "Software Engineering", 
                         "Web Development"
                     ]
                 }, 
@@ -4987,7 +5003,7 @@
                     ], 
                     "title": "Lessons learned from 4 years of letting readers choose the front page of the web", 
                     "topic": [
-                        "Startup Lessons"
+                        "Entrepreneurship"
                     ]
                 }, 
                 {
@@ -4997,7 +5013,8 @@
                     ], 
                     "title": "Beautiful Parallelism: Harnessing Multicores with Haskell", 
                     "topic": [
-                        "Programming"
+                        "Programming Languages", 
+                        "Parallel"
                     ]
                 }, 
                 {
@@ -5216,7 +5233,8 @@
                     ], 
                     "title": "How To Become A Successful Internet Cartoonist In Three Easy Steps (Not)", 
                     "topic": [
-                        "Internet"
+                        "Internet", 
+                        "Web Comic"
                     ]
                 }, 
                 {
@@ -5226,7 +5244,8 @@
                     ], 
                     "title": "Geometric Sculpture", 
                     "topic": [
-                        "Fabrication"
+                        "Art", 
+                        "Theory"
                     ]
                 }, 
                 {
@@ -5266,7 +5285,7 @@
                     ], 
                     "title": "ACM of Yore", 
                     "topic": [
-                        "Internet"
+                        "History"
                     ]
                 }, 
                 {
@@ -5287,7 +5306,7 @@
                     "title": "The Social Responsibility of Computer Science", 
                     "topic": [
                         "Ethics", 
-                        "Programming"
+                        "Software Engineering"
                     ]
                 }, 
                 {
@@ -5328,7 +5347,8 @@
                     ], 
                     "title": "Extending the Open Web, and Surviving Poisonous People", 
                     "topic": [
-                        "Web Development"
+                        "Web Development", 
+                        "Personal Development"
                     ]
                 }, 
                 {
@@ -5578,7 +5598,7 @@
                     ], 
                     "title": "A JVM Does What?", 
                     "topic": [
-                        "Programming", 
+                        "Software Engineering", 
                         "Computer Architecture"
                     ]
                 }, 
@@ -5589,7 +5609,7 @@
                     ], 
                     "title": "Towards a Coding Style for Scalable Nonblocking Data Structures", 
                     "topic": [
-                        "Programming"
+                        "Software Engineering"
                     ]
                 }, 
                 {
@@ -5599,7 +5619,7 @@
                     ], 
                     "title": "How To Design a Good API and Why it Matters", 
                     "topic": [
-                        "Programming", 
+                        "Software Engineering", 
                         "API"
                     ]
                 }, 
@@ -5631,7 +5651,7 @@
                     ], 
                     "title": "The Power of Examples", 
                     "topic": [
-                        "Programming"
+                        "Software Engineering"
                     ]
                 }, 
                 {
@@ -5662,7 +5682,8 @@
                     ], 
                     "title": "Watson, Jeopardy, and Language", 
                     "topic": [
-                        "Artificial Intelligence"
+                        "Artificial Intelligence", 
+                        "Theory"
                     ]
                 }, 
                 {
@@ -5672,7 +5693,7 @@
                     ], 
                     "title": "Scaling Software Infrastructure - From 4 to 400", 
                     "topic": [
-                        "Programming"
+                        "Software Engineering"
                     ]
                 }, 
                 {
@@ -5712,7 +5733,7 @@
                     ], 
                     "title": "Moving Beyond Programmer: Succeeding in the Video Game Industry", 
                     "topic": [
-                        "Programming"
+                        "Game Programming"
                     ]
                 }, 
                 {
@@ -5910,7 +5931,7 @@
                     ], 
                     "title": "How to Change the World With Your Mind", 
                     "topic": [
-                        "Startup Lessons"
+                        "Entrepreneurship"
                     ]
                 }, 
                 {
@@ -5930,7 +5951,8 @@
                     ], 
                     "title": "An Introduction to Dart", 
                     "topic": [
-                        "Web Development"
+                        "Web Development", 
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -5940,7 +5962,8 @@
                     ], 
                     "title": "Bullseye: Your First Dart App", 
                     "topic": [
-                        "Web Development"
+                        "Web Development", 
+                        "Programming Languages"
                     ]
                 }, 
                 {
@@ -5960,7 +5983,7 @@
                     ], 
                     "title": "Building Software for 1 to 100 million users", 
                     "topic": [
-                        "Engineering at a Human Scale"
+                        "Web Development"
                     ]
                 }, 
                 {
@@ -6030,7 +6053,7 @@
                     ], 
                     "title": "Secrets of the Universe, or A Few Random Bits", 
                     "topic": [
-                        "Startup Lessons"
+                        "Entrepreneurship"
                     ]
                 }, 
                 {
@@ -6073,7 +6096,7 @@
                     ], 
                     "title": "Startup Panel", 
                     "topic": [
-                        "Startup Lessons"
+                        "Entrepreneurship"
                     ]
                 }, 
                 {
