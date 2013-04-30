@@ -72,7 +72,7 @@ function sex_data(years) {
 function sex_chart(root,years) {
 	var data = sex_data(years);
 	var mColor = "#6A5ACD";
-	var wColor = "#FFFFFF";
+	var wColor = "#EE799F";
 	var width = 300;
 	var height = 200 - 20;
 	var radius = 100;
