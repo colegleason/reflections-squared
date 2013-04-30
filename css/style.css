@@ -2,9 +2,6 @@ body {
   background-color: #2e2e2e;
   color: #e1e1e1; }
 
-#wrap {
-  width: 100%; }
-
 ul li {
   list-style: none; }
   ul li a {
@@ -15,3 +12,6 @@ ul li {
   stroke: #2e2e2e; }
 #degrees text {
   fill: #e1e1e1; }
+
+#info-panel li {
+  padding: 0 0 4px 0; }

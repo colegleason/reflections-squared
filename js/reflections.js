@@ -231,9 +231,9 @@ function topic_list(root, years) {
 		if (e.topic != null) {
 			e.topic.forEach(function(t) {
 				if (topics.hasOwnProperty(t)) {
-					topics[t]++;
+					topics[t].push(e);
 				} else {
-					topics[t] = 1;
+					topics[t] = [e];
 				}
 			});
 		}
@@ -241,8 +241,8 @@ function topic_list(root, years) {
 
 	var data = [];
 	for (var key in topics) {
-		var count = topics[key];
-		data.push({topic: key, count: count})
+		var count = topics[key].length;
+		data.push({topic: key, count: count, events: topics[key]})
 	}
 
 	data.sort(function (a,b) { return b.count - a.count});
@@ -265,6 +265,7 @@ function topic_list(root, years) {
 		.style("padding-left", "20px")
 		.style("font-size", function(d) {return scale(d.count) + "px"})
 		.text(function(d) { return d.topic + " " + d.count; })
+	.on("click", function(d) { info_panel_talks(d.topic, d.events)})
 }
 
 function degree_types(root, years) {
@@ -354,10 +355,10 @@ function info_panel_speakers(title, speaker_list) {
 
     var dupes = {};
     for (var speaker in speakers) {
-    if (!dupes.hasOwnProperty(speaker.name))
-	dupes[speaker.name] = true;
+	if (!dupes.hasOwnProperty(speaker.name))
+	    dupes[speaker.name] = true;
 	else speakers.splice(speaker, 1);
-}
+    }
 
     info.select("h2").remove();
     info.append("h2").text(title);
@@ -371,6 +372,38 @@ function info_panel_speakers(title, speaker_list) {
 	.append("li")
 	.text(function(d) { return d.name})
 
-	info.exit().remove();
+    info.exit().remove();
+
+}
+
+function info_panel_talks(title, talk_list) {
+    var info = d3.select("#info-panel");
+
+    var talks = talk_list.sort(function(a, b) {
+	if (a.title<b.title) return -1;
+	if (a.title>b.title) return 1;
+	return 0;
+    })
+
+    var dupes = {};
+    for (var talk in talks) {
+	if (!dupes.hasOwnProperty(talk.title))
+	    dupes[talk.title] = true;
+	else talks.splice(talk, 1);
+    }
+
+    info.select("h2").remove();
+    info.append("h2").text(title);
+    info.select("ul").remove();
+    info = info.append("ul");
+
+    info = info.selectAll("li")
+	.data(talks);
+
+    info.enter()
+	.append("li")
+	.text(function(d) { return d.title})
+
+    info.exit().remove();
 
 }
