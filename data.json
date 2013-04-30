@@ -2057,7 +2057,7 @@
                     ]
                 }, 
                 {
-                    "affiliation": "", 
+                    "affiliation": null, 
                     "degree": null, 
                     "degree_from": null, 
                     "name": "Bill Nash", 

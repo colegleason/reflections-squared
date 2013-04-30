@@ -30,7 +30,7 @@ function load_data() {
         // Construct content
         var content = d3.select("#content");
         top_affiliations(content, years, 5);
-
+        degree_types(content, years);
 });
 }
 
@@ -87,4 +87,78 @@ function top_affiliations(root, years, number) {
         .enter()
         .append("li")
         .text(function(d) { return d.name + " " + d.count})
+}
+
+
+function degree_types(root, years) {
+    var speakers = collapse_speakers(years);
+    var degrees = {};
+    speakers.forEach(function(speaker) {
+        if (speaker.degree != null) {
+            if (degrees.hasOwnProperty(speaker.degree)) {
+                degrees[speaker.degree]++;
+            } else {
+                degrees[speaker.degree] = 1;
+            }
+        }
+    });
+
+    var data = [];
+    for (var key in degrees) {
+        var count = degrees[key];
+        data.push({name: key, count: count})
+    }
+    console.log(data);
+
+    data.sort(function (a, b) { return b.count - a.count });
+
+    var graph = root.append("div")
+        .attr("id", "degrees");
+
+    graph.append("h2")
+        .text("Degree Types");
+
+    chart = graph.append("svg");
+
+    var max_width = 300 // chart width (only for bars, not labels)
+    var x = d3.scale.linear()
+        .domain([0, d3.max(data, function(d) { return d.count; })])
+        .range([0, max_width]);
+
+    var y = d3.scale.ordinal()
+        .domain(d3.range(data.length))
+        .rangeBands([0, 250]);
+
+    //Bars
+    chart.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("y", function(d, i) { return y(i);})
+        .attr("x", function(d) { return 50 + max_width - x(d.count)})
+        .attr("width", function(d) { return x(d.count);})
+        .attr("height", y.rangeBand())
+        .text(function(d) { return d.name; });
+
+    // Bar Chart Labels
+    chart.selectAll("text.labels")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "labels")
+        .attr("x", 3)
+        .attr("y", function(d, i) { return y(i) + y.rangeBand() / 2; })
+        .attr("dy", ".35em") // vertical-align: middle
+        .text(function(d) { return d.name; });
+
+    // Bar Chart counts
+    chart.selectAll("text.counts")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "counts")
+        .attr("x", 50 + max_width + 5)
+        .attr("y", function(d, i) { return y(i) + y.rangeBand() / 2; })
+        .attr("dy", ".35em") // vertical-align: middle
+        .text(function(d) { return d.count; });
 }
