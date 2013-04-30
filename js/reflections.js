@@ -56,15 +56,15 @@ function sex_data(years) {
 	var speakers = collapse_speakers(years);
 	speakers.forEach(function(speaker) {
 		if (sexes.hasOwnProperty(speaker.sex)) {
-			sexes[speaker.sex]++;
+			sexes[speaker.sex].push(speaker);
 		} else {
-			sexes[speaker.sex] = 1;
+			sexes[speaker.sex] = [speaker];
 		}
 	});
 	var data = [];
 	for (var key in sexes) {
-		var count = sexes[key];
-		data.push({name: key, count: count})
+		var count = sexes[key].length;
+		data.push({name: key, count: count, speakers: sexes[key]})
 	}
 	return data;
 }
@@ -109,7 +109,13 @@ function sex_chart(root,years) {
 				color =	 wColor;
 			}
 			return color;
-		});
+		})
+    .on("click", function(d) {
+	if (d.data.name == "F")
+	    info_panel_speakers("Women", d.data.speakers)
+	else if (d.data.name == "M")
+	    info_panel_speakers("Men", d.data.speakers)
+    })
 
 	graph.selectAll("text.labels")
 		.data(data)
@@ -132,7 +138,7 @@ function sex_chart(root,years) {
 			} else {
 				return d.count + " Men";
 			}
-			return d.count + " " + d.name});
+			}});
 	}
 
 function collapse_speakers(years) {
@@ -157,17 +163,17 @@ function top_affiliations(root, years, number) {
 	speakers.forEach(function(speaker) {
 		if (speaker.affiliation != null) {
 			if (affiliations.hasOwnProperty(speaker.affiliation)) {
-				affiliations[speaker.affiliation]++;
+				affiliations[speaker.affiliation].push(speaker);
 			} else {
-				affiliations[speaker.affiliation] = 1;
+				affiliations[speaker.affiliation] = [speaker];
 			}
 		}
 	});
 
 	var data = [];
 	for (var key in affiliations) {
-		var count = affiliations[key];
-		data.push({name: key, count: count})
+		var count = affiliations[key].length;
+		data.push({name: key, count: count, speakers: affiliations[key]})
 	}
 
 	data.sort(function (a, b) { return b.count - a.count; });
@@ -185,6 +191,7 @@ function top_affiliations(root, years, number) {
 		.enter()
 		.append("li")
 		.text(function(d) { return d.name + " " + d.count})
+	.on("click", function(d) { return info_panel_speakers(d.name, d.speakers)})
 }
 
 function top_degrees_from(root, years, number) {
@@ -193,17 +200,17 @@ function top_degrees_from(root, years, number) {
 	speakers.forEach(function(speaker) {
 		if (speaker.degree_from != null) {
 			if (schools.hasOwnProperty(speaker.degree_from)) {
-				schools[speaker.degree_from]++;
+				schools[speaker.degree_from].push(speaker);
 			} else {
-				schools[speaker.degree_from] = 1;
+				schools[speaker.degree_from] = [speaker];
 			}
 		}
 	});
 
 	var data = [];
 	for (var key in schools) {
-		var count = schools[key];
-		data.push({name: key, count: count})
+		var count = schools[key].length;
+		data.push({name: key, count: count, speakers: schools[key]})
 	}
 
 	data.sort(function (a, b) { return b.count - a.count; });
@@ -221,6 +228,7 @@ function top_degrees_from(root, years, number) {
 		.enter()
 		.append("li")
 		.text(function(d) { return d.name + " " + d.count})
+    .on("click", function(d) { return info_panel_speakers(d.name, d.speakers)})
 }
 
 function topic_list(root, years) {
@@ -271,9 +279,9 @@ function degree_types(root, years) {
 	speakers.forEach(function(speaker) {
 		if (speaker.degree != null) {
 			if (degrees.hasOwnProperty(speaker.degree)) {
-				degrees[speaker.degree]++;
+				degrees[speaker.degree].push(speaker);
 			} else {
-				degrees[speaker.degree] = 1;
+				degrees[speaker.degree] = [speaker];
 			}
 		}
 	});
@@ -281,8 +289,8 @@ function degree_types(root, years) {
 
 	var data = [];
 	for (var key in degrees) {
-		var count = degrees[key];
-		data.push({name: key, count: count})
+		var count = degrees[key].length;
+		data.push({name: key, count: count, speakers: degrees[key]})
 	}
 
 	data.sort(function (a, b) { return b.count - a.count });
@@ -295,7 +303,7 @@ function degree_types(root, years) {
 
 	var max_width = 300 // chart width (only for bars, not labels)
 	var bar_height = 20;
-	var text_padding = 50;
+	var text_padding = 80;
 	var x = d3.scale.linear()
 		.domain([0, d3.max(data, function(d) { return d.count; })])
 		.range([0, max_width]);
@@ -313,7 +321,7 @@ function degree_types(root, years) {
 		.attr("x", function(d) { return text_padding + max_width - x(d.count)})
 		.attr("width", function(d) { return x(d.count);})
 		.attr("height", bar_height)
-		.text(function(d) { return d.name; });
+	.on("click", function(d) { return info_panel_speakers(d.name, d.speakers)})
 
 	// Bar Chart Labels
 	chart.selectAll("text.labels")
@@ -324,7 +332,8 @@ function degree_types(root, years) {
 		.attr("x", 3)
 		.attr("y", function(d, i) { return i*bar_height +  bar_height/2})
 		.attr("dy", ".35em") // vertical-align: middle
-		.text(function(d) { return d.name; });
+		.text(function(d) { return d.name; })
+	.on("click", function(d) { return info_panel_speakers(d.name, d.speakers)})
 
 	// Bar Chart counts
 	chart.selectAll("text.counts")
@@ -335,5 +344,39 @@ function degree_types(root, years) {
 		.attr("x", text_padding + max_width + 5)
 		.attr("y", function(d, i) { return i * bar_height + bar_height /2;})
 		.attr("dy", ".35em") // vertical-align: middle
-		.text(function(d) { return d.count; });
+		.text(function(d) { return d.count; })
+	.on("click", function(d) { return info_panel_speakers(d.name, d.speakers)})
+}
+
+
+function info_panel_speakers(title, speaker_list) {
+    var info = d3.select("#info-panel");
+
+    var speakers = speaker_list.sort(function(a, b) {
+	if (a.name<b.name) return -1;
+	if (a.name>b.name) return 1;
+	return 0;
+    })
+
+    var dupes = {};
+    for (var speaker in speakers) {
+    if (!dupes.hasOwnProperty(speaker.name))
+	dupes[speaker.name] = true;
+	else speakers.splice(speaker, 1);
+}
+
+    info.select("h2").remove();
+    info.append("h2").text(title);
+    info.select("ul").remove();
+    info = info.append("ul");
+
+    info = info.selectAll("li")
+	.data(speakers);
+
+    info.enter()
+	.append("li")
+	.text(function(d) { return d.name})
+
+	info.exit().remove();
+
 }
