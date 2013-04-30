@@ -238,6 +238,33 @@ function topic_list(root, years) {
 			});
 		}
 	});
+
+	var data = [];
+	for (var key in topics) {
+		var count = topics[key];
+		data.push({topic: key, count: count})
+	}
+
+	data.sort(function (a,b) { return b.count - a.count});
+
+	var maximum = data[0].count;
+	var scale = d3.scale.linear()
+		.domain([1,maximum])
+		.range([12,24]);
+
+	var topics_list = root.append("div")
+		.attr("id", "topics")
+
+	topics_list.append("h2")
+		.text("Talk Topics");
+
+	topics_list.selectAll("p")
+		.data(data)
+		.enter()
+		.append("p")
+		.style("padding-left", "20px")
+		.style("font-size", function(d) {return scale(d.count) + "px"})
+		.text(function(d) { return d.topic + " " + d.count; })
 }
 
 function degree_types(root, years) {
