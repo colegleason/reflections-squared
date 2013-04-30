@@ -31,6 +31,7 @@ function load_data() {
         var content = d3.select("#content");
         top_affiliations(content, years, 5);
         degree_types(content, years);
+	sex_chart(content,years)
 });
 }
 
@@ -44,6 +45,62 @@ function year_list(root, data) {
 	.attr("href", function(d) {return "/index.html/?year="+d})
 	.text(function(d) {return d});
 }
+
+function sex_chart(root,years) {
+	var sexes = {};
+	var speakers = collapse_speakers(years);
+	speakers.forEach(function(speaker) {
+		if (sexes.hasOwnProperty(speaker.sex)) {
+			sexes[speaker.sex]++;
+		} else {
+			sexes[speaker.sex] = 1;
+		}
+	});
+	var data = [];
+	for (var key in sexes) {
+		var count = sexes[key];
+		data.push({name: key, count: count})
+	}
+
+	var width = 200;
+	var height = 200;
+	var radius = 100;
+	var arc = d3.svg.arc()
+		.outerRadius(radius - 10)
+		.innerRadius(0);
+	var pie = d3.layout.pie()
+		.sort(null)
+		.value(function(d) {console.log(d.count); return d.count})
+	var svg = root.append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.append("g")
+		.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+	var g = svg.selectAll(".arc")
+		.data(pie(data))
+		.enter().append("g")
+		.attr("class","arc");
+	g.append("path")
+		.attr("d",arc)
+		.style("fill", function(d) {
+			console.log(d);
+			var color = "#6A5ACD";
+			if (d.data.name == "F") {
+				color =  "#ffffff";
+			}
+			return color;
+		});
+	g.append("text")
+		.attr("transform", function(d) {
+			return "translate(" + arc.centroid(d) + ")";})
+		.attr("dy",".35em")
+		.style("text-anchor", "middle")
+		.text(function(d) {return d.data.name + " " + d.data.count;});
+	console.log(data);
+	data.forEach(function(d) {
+		console.log(d.name + " " + d.count);
+	});
+	}
 
 function collapse_speakers(years) {
     var speakers = [];

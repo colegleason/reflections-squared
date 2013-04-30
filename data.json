@@ -2606,11 +2606,11 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "GNU Hurd", 
                     "degree": null, 
                     "degree_from": null, 
                     "name": "Marcus Brinkmann", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "GNU Hurd", 
                         "Workshop: The HURD Interfaces", 
@@ -2628,11 +2628,11 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "Debian", 
                     "degree": "BS", 
                     "degree_from": "Purdue University", 
                     "name": "Ian Murdock", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "Debian:Anantomy of an Open Source Project", 
                         "University of North Carolina at Chapel Hill"
@@ -2669,11 +2669,11 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "Enlightenment", 
                     "degree": "BS", 
                     "degree_from": "University of New South Wales", 
                     "name": "Carsten \"Rasterman\" Haitzler", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "Linux Embedded and Desktop Displays: A Canvas Approach", 
                         "University of North Carolina at Chapel Hill"
@@ -2690,11 +2690,11 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "University of California at San Diego", 
                     "degree": "PhD", 
                     "degree_from": "Technical University of Denmark", 
                     "name": "Henrik Wann Jensen", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "Photon Mapping: Digital Realism", 
                         "Digital Translucent Materials and Hair"
@@ -2711,31 +2711,31 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "University of Illinois at Urbana-Champaign", 
                     "degree": "(no degree)", 
                     "degree_from": null, 
                     "name": "Nasko Oskov", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "UNIX Security and Network Vulnerabilities"
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "University of Illinois at Urbana-Champaign", 
                     "degree": "(no degree)", 
                     "degree_from": null, 
                     "name": "Dave Goodell", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "UNIX Security and Network Vulnerabilities"
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "University of Illinois at Urbana-Champaign", 
                     "degree": "(no degree)", 
                     "degree_from": null, 
                     "name": "Christopher Clausen", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "University of North Carolina at Chapel Hill"
                     ]
@@ -2864,11 +2864,11 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "Argonne", 
                     "degree": "MS", 
                     "degree_from": "University of Chicago", 
                     "name": "Douglas Engert", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "Authentication Methods for Single Sign-On: Kerberos and GSI", 
                         "Panel: Working Security in a Working Environment"
@@ -2885,22 +2885,22 @@
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "Electronic Frontier Foundation", 
                     "degree": "BS", 
                     "degree_from": "University of California at Berkeley", 
                     "name": "Seth Schoen", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "Trusted Conputing", 
                         "Panel: Working Security in a Working Environment"
                     ]
                 }, 
                 {
-                    "affiliation": null, 
+                    "affiliation": "Microsoft", 
                     "degree": "PhD", 
                     "degree_from": "Michigan State University", 
                     "name": "Doug Bayer", 
-                    "sex": null, 
+                    "sex": "M", 
                     "talks": [
                         "The \"Cyber Immune System:\" The Advancement of Technology to Prevent Viral Attacks", 
                         "Panel: Working Security in a Working Environment"
@@ -3782,7 +3782,7 @@
                     "degree": null, 
                     "degree_from": null, 
                     "name": "Ik Yoo", 
-                    "sex": "M?", 
+                    "sex": "M", 
                     "talks": [
                         "Grid and Utility Computing in Practice: A Virtualized Reality"
                     ]
