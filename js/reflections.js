@@ -240,7 +240,7 @@ function degree_types(root, years) {
         .range([0, max_width]);
 
     chart = graph.append("svg")
-        .attr("width", max_width + text_padding)
+        .attr("width", max_width + text_padding + 20)
         .attr("height", data.length*bar_height);
 
     //Bars
