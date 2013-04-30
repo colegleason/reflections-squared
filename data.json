@@ -873,8 +873,8 @@
                 }, 
                 {
                     "affiliation": "BALR", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Ron Rice", 
                     "sex": "M", 
                     "talks": [
@@ -903,8 +903,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Dave Jeske", 
                     "sex": "M", 
                     "talks": [
@@ -943,8 +943,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Jay Kreibich", 
                     "sex": "M", 
                     "talks": [
@@ -1210,8 +1210,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Paul Nash", 
                     "sex": "M", 
                     "talks": [
@@ -1220,8 +1220,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Paul Watts", 
                     "sex": "M", 
                     "talks": [
@@ -1708,8 +1708,8 @@
                 }, 
                 {
                     "affiliation": null, 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Eric S. Raymond", 
                     "sex": "M", 
                     "talks": [
@@ -1718,8 +1718,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Jawed Karim", 
                     "sex": "M", 
                     "talks": [
@@ -1778,8 +1778,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Josh Michaels", 
                     "sex": "M", 
                     "talks": [
@@ -1868,8 +1868,8 @@
                 }, 
                 {
                     "affiliation": "XCO Design", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Rick Valentin", 
                     "sex": "M", 
                     "talks": [
@@ -2640,8 +2640,8 @@
                 }, 
                 {
                     "affiliation": "Havenco", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Ryan Lackey", 
                     "sex": "M", 
                     "talks": [
@@ -2712,8 +2712,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": null, 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Nasko Oskov", 
                     "sex": "M", 
                     "talks": [
@@ -2722,8 +2722,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": null, 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Dave Goodell", 
                     "sex": "M", 
                     "talks": [
@@ -2732,8 +2732,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": null, 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Christopher Clausen", 
                     "sex": "M", 
                     "talks": [
@@ -2918,8 +2918,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Zack Rosen", 
                     "sex": "M", 
                     "talks": [
@@ -2928,8 +2928,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Nasko Oskov", 
                     "sex": "M", 
                     "talks": [
@@ -2938,8 +2938,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Dave Goodell", 
                     "sex": "M", 
                     "talks": [
@@ -2948,8 +2948,8 @@
                 }, 
                 {
                     "affiliation": "University of Illinois at Urbana-Champaign", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Christopher Clausen", 
                     "sex": "M", 
                     "talks": [
@@ -3719,8 +3719,8 @@
                 }, 
                 {
                     "affiliation": "Mozilla Foundation", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Blake Ross", 
                     "sex": "M", 
                     "talks": [
@@ -5890,8 +5890,8 @@
                 }, 
                 {
                     "affiliation": "Dropbox", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Albert Ni", 
                     "sex": "M", 
                     "talks": [
@@ -6252,8 +6252,8 @@
                 }, 
                 {
                     "affiliation": "One", 
-                    "degree": "(no degree)", 
-                    "degree_from": "(no degree)", 
+                    "degree": "No Degree", 
+                    "degree_from": "No Degree", 
                     "name": "Cory Levy", 
                     "sex": "M", 
                     "talks": [

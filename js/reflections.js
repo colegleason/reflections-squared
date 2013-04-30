@@ -31,7 +31,8 @@ function load_data() {
         var content = d3.select("#content");
         top_affiliations(content, years, 5);
         degree_types(content, years);
-	sex_chart(content,years)
+		sex_chart(content,years);
+		top_degrees_from(content,years,5);
 });
 }
 
@@ -167,6 +168,41 @@ function top_affiliations(root, years, number) {
         .text(function(d) { return d.name + " " + d.count})
 }
 
+function top_degrees_from(root, years, number) {
+    var schools = {};
+    var speakers = collapse_speakers(years);
+    speakers.forEach(function(speaker) {
+        if (speaker.degree_from != null) {
+            if (schools.hasOwnProperty(speaker.degree_from)) {
+                schools[speaker.degree_from]++;
+            } else {
+                schools[speaker.degree_from] = 1;
+            }
+        }
+    });
+
+    var data = [];
+    for (var key in schools) {
+        var count = schools[key];
+        data.push({name: key, count: count})
+    }
+
+    data.sort(function (a, b) { return b.count - a.count; });
+    data = data.slice(0, number);
+    var graph = root.append("div")
+        .attr("id", "degrees_from");
+
+    graph.append("h2")
+        .text("Most Degrees From");
+
+    graph = graph.append("ol");
+
+    graph.selectAll("li")
+        .data(data)
+        .enter()
+        .append("li")
+        .text(function(d) { return d.name + " " + d.count})
+}
 
 function degree_types(root, years) {
     var speakers = collapse_speakers(years);
