@@ -113,6 +113,6 @@ Running
 =======
 Start a webserver in the project root and load index.html.
 
-   python -m SimpleHTTPServer 8000
+<pre>python -m SimpleHTTPServer 8000</pre>
    
 Use the years in the sidebar to see a specific year.  Logo takes you back to overview.  Clicking most elements in charts or lists will pull up a list of speakers/events in the right column.
