@@ -12,7 +12,6 @@ throughout the years. The types of data collected is below:
 
 Speakers:
 * Name
-* Age at time of talk
 * Highest Degree at time of talk
 * Place that degree was earned
 * Gender
@@ -25,6 +24,7 @@ If we could not find the data, that field was left blank.
 
 We then created a JSON file from our data, structured as follows:
 
+<pre>
 {
     "speaker_years": {
         "Adrian Bowyer": [
@@ -107,3 +107,12 @@ We then created a JSON file from our data, structured as follows:
         }
     }
 }
+</pre>
+
+Running
+=======
+Start a webserver in the project root and load index.html.
+
+   python -m SimpleHTTPServer 8000
+   
+Use the years in the sidebar to see a specific year.  Logo takes you back to overview.  Clicking most elements in charts or lists will pull up a list of speakers/events in the right column.
