@@ -8,20 +8,22 @@ function load_speakers() {
 }
 
 function load_data() {
-	d3.json("data.json", function(error,json)
+	d3.json("data.json", function(error,json){
 		if (error) return console.warn(error);
 		var data = json;
-		var content = d3.select("#years");
+		var content = d3.select("#sidebar");
 		year_list(content, data.years)
-);
+});
 }
 
 function year_list(root, data) {
-	var graph = root.append("div").append("ol");
+	var graph = root.append("div").append("ul");
 	graph.selectAll("li")
-		.data(data)
+		.data(d3.keys(data))
 		.enter()
 		.append("li")
+		.append("a")
+		.attr("href", function(d) {return "index.html/?year="+d})
 		.text(function(d) {return d});
 }
 
