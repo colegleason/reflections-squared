@@ -175,13 +175,16 @@ function degree_types(root, years) {
     graph.append("h2")
         .text("Degree Types");
 
-    chart = graph.append("svg");
-
     var max_width = 300 // chart width (only for bars, not labels)
     var bar_height = 20;
+    var text_padding = 50;
     var x = d3.scale.linear()
         .domain([0, d3.max(data, function(d) { return d.count; })])
         .range([0, max_width]);
+
+    chart = graph.append("svg")
+        .attr("width", max_width + text_padding)
+        .attr("height", data.length*bar_height);
 
     //Bars
     chart.selectAll("rect")
@@ -189,7 +192,7 @@ function degree_types(root, years) {
         .enter()
         .append("rect")
         .attr("y", function(d, i) { return i * bar_height})
-        .attr("x", function(d) { return 50 + max_width - x(d.count)})
+        .attr("x", function(d) { return text_padding + max_width - x(d.count)})
         .attr("width", function(d) { return x(d.count);})
         .attr("height", bar_height)
         .text(function(d) { return d.name; });
@@ -211,7 +214,7 @@ function degree_types(root, years) {
         .enter()
         .append("text")
         .attr("class", "counts")
-        .attr("x", 50 + max_width + 5)
+        .attr("x", text_padding + max_width + 5)
         .attr("y", function(d, i) { return i * bar_height + bar_height /2;})
         .attr("dy", ".35em") // vertical-align: middle
         .text(function(d) { return d.count; });
