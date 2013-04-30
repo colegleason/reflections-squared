@@ -45,8 +45,7 @@ function year_list(root, data) {
 	.attr("href", function(d) {return "/index.html/?year="+d})
 	.text(function(d) {return d});
 }
-
-function sex_chart(root,years) {
+function sex_data(years) {
 	var sexes = {};
 	var speakers = collapse_speakers(years);
 	speakers.forEach(function(speaker) {
@@ -61,25 +60,45 @@ function sex_chart(root,years) {
 		var count = sexes[key];
 		data.push({name: key, count: count})
 	}
+	return data;
+}
+
+function sex_chart(root,years) {
+	var data = sex_data(years);
 
 	var width = 200;
-	var height = 200;
+
+	var height = 200 - 20;
+
 	var radius = 100;
+
+	var margin = 20;
+
 	var arc = d3.svg.arc()
 		.outerRadius(radius - 10)
 		.innerRadius(0);
+
 	var pie = d3.layout.pie()
 		.sort(null)
 		.value(function(d) {console.log(d.count); return d.count})
-	var svg = root.append("svg")
+
+	var graph = root.append("div")
+		.attr("id", "sex");
+
+	graph.append("h2")
+		.text("Speaker Sex");
+
+	var svg = graph.append("svg")
 		.attr("width", width)
 		.attr("height", height)
 		.append("g")
 		.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
 	var g = svg.selectAll(".arc")
 		.data(pie(data))
 		.enter().append("g")
 		.attr("class","arc");
+
 	g.append("path")
 		.attr("d",arc)
 		.style("fill", function(d) {
@@ -90,16 +109,13 @@ function sex_chart(root,years) {
 			}
 			return color;
 		});
+
 	g.append("text")
 		.attr("transform", function(d) {
 			return "translate(" + arc.centroid(d) + ")";})
 		.attr("dy",".35em")
 		.style("text-anchor", "middle")
 		.text(function(d) {return d.data.name + " " + d.data.count;});
-	console.log(data);
-	data.forEach(function(d) {
-		console.log(d.name + " " + d.count);
-	});
 	}
 
 function collapse_speakers(years) {
