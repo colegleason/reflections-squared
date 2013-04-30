@@ -4,30 +4,28 @@
     <meta charset="utf-8">
     <title>reflecitons squared</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <div class="container row">
+    <div class="container-fluid row-fluid">
       <div class="span12" id="wrap">
-        <div class="row">
-          <div class="span4" id="sidebar">
+        <div id="header" class="row-fluid">
+          <a href="/index.html"><img alt="Reflections Projections Logo" src="/img/logo.png" class="span2"/></a>
+          <h1 class="span10">reflections<sup>2</sup>projections</h1>
+        </div>
+        <div class="row-fluid">
+          <div class="span2" id="sidebar">
           </div>
           <div class="span8">
-            <nav>
-              <ul>
-                <li><a href="speaker_graphs()">Speakers</a></li>
-              </ul>
-            </nav>
-            <div id="content">
-              <h1>Stuff goes here</h1>
-            </div>
+            <div id="content"></div>
           </div>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="/js/d3.v3.js"></script>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/reflections.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/reflections.js"></script>
     <script type="text/javascript">
       load_data();
     </script>

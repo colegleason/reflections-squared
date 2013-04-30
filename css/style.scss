@@ -1,0 +1,17 @@
+$text-color: #e1e1e1;
+
+body {
+  background-color: #2e2e2e;
+  color: $text-color;
+}
+
+#wrap {
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+  a {
+    color: $text-color;
+  }
+}

@@ -12,31 +12,37 @@ function get_param(name)
 }
 
 function load_data() {
-    d3.json("data.json", function(error, json) {
+    d3.json("/data.json", function(error, json) {
         if (error) return console.warn(error);
         var data = json;
-	var sidebar = d3.select("#sidebar")
-	year_list(sidebar,data.years);
-        var content = d3.select("#content");
-        var year = get_param("year");
+
+        // Construct Sidebar
+        var sidebar = d3.select("#sidebar")
+        year_list(sidebar, data.years);
+
+        // Set the years to be those specified in the GET request
         var years = data.years;
+        var year = get_param("year");
         if (year != "") {
             console.log("Year: " + year);
             years = [data.years[year]];
         }
+        // Construct content
+        var content = d3.select("#content");
         top_affiliations(content, years, 5);
+
 });
 }
 
 function year_list(root, data) {
-	var graph = root.append("div").append("ul");
-	graph.selectAll("li")
-		.data(d3.keys(data))
-		.enter()
-		.append("li")
-		.append("a")
-		.attr("href", function(d) {return "index.html/?year="+d})
-		.text(function(d) {return d});
+    var graph = root.append("div").append("ul");
+    graph.selectAll("li")
+	.data(d3.keys(data))
+	.enter()
+	.append("li")
+	.append("a")
+	.attr("href", function(d) {return "/index.html/?year="+d})
+	.text(function(d) {return d});
 }
 
 function collapse_speakers(years) {
@@ -51,10 +57,12 @@ function top_affiliations(root, years, number) {
     var affiliations = {};
     var speakers = collapse_speakers(years);
     speakers.forEach(function(speaker) {
-        if (affiliations.hasOwnProperty(speaker.affiliation)) {
-            affiliations[speaker.affiliation]++;
-        } else {
-            affiliations[speaker.affiliation] = 1;
+        if (speaker.affiliation != null) {
+            if (affiliations.hasOwnProperty(speaker.affiliation)) {
+                affiliations[speaker.affiliation]++;
+            } else {
+                affiliations[speaker.affiliation] = 1;
+            }
         }
     });
 
@@ -65,10 +73,14 @@ function top_affiliations(root, years, number) {
     }
 
     data.sort(function (a, b) { return b.count - a.count; });
-
+    data = data.slice(0, number);
     var graph = root.append("div")
-        .attr("id", "affiliations")
-        .append("ol");
+        .attr("id", "affiliations");
+
+    graph.append("h2")
+        .text("Top Affiliated Companies");
+
+    graph = graph.append("ol");
 
     graph.selectAll("li")
         .data(data)
