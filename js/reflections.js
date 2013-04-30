@@ -115,7 +115,12 @@ function sex_chart(root,years) {
 			return "translate(" + arc.centroid(d) + ")";})
 		.attr("dy",".35em")
 		.style("text-anchor", "middle")
-		.text(function(d) {return d.data.name + " " + d.data.count;});
+		.text(function(d) {
+			if (d.data.name == "M") {
+				return d.data.count + " Men";
+			} else {
+				return d.data.count + " Women";
+			}});
 	}
 
 function collapse_speakers(years) {
