@@ -31,11 +31,11 @@ function load_data() {
 		// Construct content
 		var column1 = d3.select("#column1");
 		var column2 = d3.select("#column2");
-		top_affiliations(column2, years, 5);
+		top_affiliations(column1, years, 5);
 		degree_types(column1, years);
-		sex_chart(column1, years)
-		top_degrees_from(column2,years,5);
-		topic_list(column1,years);
+		sex_chart(column2, years)
+		top_degrees_from(column1,years,5);
+		topic_list(column2,years);
 
 
 });
@@ -132,7 +132,7 @@ function sex_chart(root,years) {
 			}
 			return color;
 		})
-		.text(function(d) { 
+		.text(function(d) {
 			if (d.name == "F") {
 				return d.count + " Women";
 			} else {
@@ -190,7 +190,7 @@ function top_affiliations(root, years, number) {
 		.data(data)
 		.enter()
 		.append("li")
-		.text(function(d) { return d.name + " " + d.count})
+	.text(function(d) { return d.name + " " + d.count})
 	.on("click", function(d) { return info_panel_speakers(d.name, d.speakers)})
 }
 

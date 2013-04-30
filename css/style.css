@@ -2,13 +2,19 @@ body {
   background-color: #2e2e2e;
   color: #e1e1e1; }
 
+#wrap {
+  margin-top: 30px; }
+
+#subtitle {
+  color: #999999; }
+
 ul li {
   list-style: none; }
   ul li a {
     color: #e1e1e1; }
 
 #degrees rect {
-  fill: steelblue;
+  fill: #00ee76;
   stroke: #2e2e2e; }
 #degrees text {
   fill: #e1e1e1; }

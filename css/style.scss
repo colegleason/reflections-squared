@@ -1,9 +1,18 @@
 $text-color: #e1e1e1;
 $background: #2e2e2e;
+$spring-green: #00ee76;
 
 body {
   background-color: $background;
   color: $text-color;
+}
+
+#wrap {
+  margin-top: 30px;
+}
+
+#subtitle {
+  color: #999999;
 }
 
 ul li {
@@ -15,7 +24,7 @@ ul li {
 
 #degrees{
   rect {
-    fill: steelblue;
+    fill: $spring-green;
     stroke: $background;
   }
   text {
