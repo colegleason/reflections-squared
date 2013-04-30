@@ -1,8 +1,25 @@
+// Citation: http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
+function getParameterByName(name)
+{
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 function load_speakers() {
     d3.json("data.json", function(error, json) {
         if (error) return console.warn(error);
         var data = json;
         var content = d3.select("#content");
+        var year = getParameterByName("year");
+        if (getParameterByName("year") != "") {
+            console.log("Year: " + year);
+        }
         top_affiliations(content, data.years, 5);
 });
 }
