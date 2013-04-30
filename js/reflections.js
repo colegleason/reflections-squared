@@ -71,15 +71,11 @@ function sex_data(years) {
 
 function sex_chart(root,years) {
 	var data = sex_data(years);
-
-	var width = 200;
-
+	var mColor = "#6A5ACD";
+	var wColor = "#FFFFFF";
+	var width = 300;
 	var height = 200 - 20;
-
 	var radius = 100;
-
-	var margin = 20;
-
 	var arc = d3.svg.arc()
 		.outerRadius(radius - 10)
 		.innerRadius(0);
@@ -92,13 +88,13 @@ function sex_chart(root,years) {
 		.attr("id", "sex");
 
 	graph.append("h2")
-		.text("Speaker Sex");
+		.text("Sex of Speakers");
 
-	var svg = graph.append("svg")
+	var graph = graph.append("svg")
 		.attr("width", width)
 		.attr("height", height)
-		.append("g")
-		.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+	var svg =  graph.append("g")
+		.attr("transform", "translate(" + width/3 + "," + height/2 + ")");
 
 	var g = svg.selectAll(".arc")
 		.data(pie(data))
@@ -108,24 +104,35 @@ function sex_chart(root,years) {
 	g.append("path")
 		.attr("d",arc)
 		.style("fill", function(d) {
-			var color = "#6A5ACD";
+			var color = mColor;
 			if (d.data.name == "F") {
-				color =	 "#ffffff";
+				color =	 wColor;
 			}
 			return color;
 		});
 
-	g.append("text")
-		.attr("transform", function(d) {
-			return "translate(" + arc.centroid(d) + ")";})
-		.attr("dy",".35em")
-		.style("text-anchor", "middle")
-		.text(function(d) {
-			if (d.data.name == "M") {
-				return d.data.count + " Men";
+	graph.selectAll("text.labels")
+		.data(data)
+		.enter()
+		.append("text")
+		.attr("class", "labels")
+		.attr("x", 200)
+		.attr("y", function(d,i) { return i*20 + 15;})
+		.attr("dy", ".35em")
+		.style("fill", function(d) {
+			var color = mColor;
+			if (d.name == "F") {
+				color =	 wColor;
+			}
+			return color;
+		})
+		.text(function(d) { 
+			if (d.name == "F") {
+				return d.count + " Women";
 			} else {
-				return d.data.count + " Women";
-			}});
+				return d.count + " Men";
+			}
+			return d.count + " " + d.name});
 	}
 
 function collapse_speakers(years) {
@@ -217,7 +224,6 @@ function top_degrees_from(root, years, number) {
 }
 
 function topic_list(root, years) {
-	console.log("topic list")
 	var events = collapse_events(years);
 	var topics = {};
 	events.forEach(function(e) {
@@ -240,9 +246,8 @@ function topic_list(root, years) {
 
 	data.sort(function (a,b) { return b.count - a.count});
 
-	var maximum = data[0].count;
 	var scale = d3.scale.linear()
-		.domain([1,maximum])
+		.domain([1, d3.max(data, function(d) { return d.count;})])
 		.range([12,24]);
 
 	var topics_list = root.append("div")
