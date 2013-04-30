@@ -360,10 +360,14 @@ function info_panel_speakers(title, speaker_list) {
     })
 
     var dupes = {};
-    for (var speaker in speakers) {
-	if (!dupes.hasOwnProperty(speaker.name))
-	    dupes[speaker.name] = true;
-	else speakers.splice(speaker, 1);
+    var speakers_tmp = [];
+    for (var index in speakers) {
+	if (!dupes.hasOwnProperty(speakers[index].name))
+	    dupes[speakers[index].name] = true;
+	else {
+	    speakers.splice(index, 1);
+	    console.log(speakers[index].name);
+}
     }
 
     info.select("h2").remove();
@@ -392,10 +396,10 @@ function info_panel_talks(title, talk_list) {
     })
 
     var dupes = {};
-    for (var talk in talks) {
-	if (!dupes.hasOwnProperty(talk.title))
-	    dupes[talk.title] = true;
-	else talks.splice(talk, 1);
+    for (var index in talks) {
+	if (!dupes.hasOwnProperty(talks[index].title))
+	    dupes[talks[index].title] = true;
+	else talks.splice(index, 1);
     }
 
     info.select("h2").remove();
