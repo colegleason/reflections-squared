@@ -28,10 +28,11 @@ function load_data() {
             years = [data.years[year]];
         }
         // Construct content
-        var content = d3.select("#content");
-        top_affiliations(content, years, 5);
-        degree_types(content, years);
-	sex_chart(content,years)
+        var column1 = d3.select("#column1");
+        var column2 = d3.select("#column2");
+        top_affiliations(column2, years, 5);
+        degree_types(column1, years);
+	sex_chart(column1, years)
 });
 }
 
@@ -156,7 +157,7 @@ function top_affiliations(root, years, number) {
         .attr("id", "affiliations");
 
     graph.append("h2")
-        .text("Top Affiliated Companies");
+        .text("Top Affiliated Organizations");
 
     graph = graph.append("ol");
 
