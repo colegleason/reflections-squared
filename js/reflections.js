@@ -20,6 +20,7 @@ function load_data() {
 		var sidebar = d3.select("#sidebar")
 		year_list(sidebar, data.years);
 
+
 		// Set the years to be those specified in the GET request
 		var years = data.years;
 		var year = get_param("year");
@@ -34,6 +35,8 @@ function load_data() {
 		degree_types(column1, years);
 	sex_chart(column1, years)
 	top_degrees_from(column2,years,5);
+	topic_list(column1,years);
+
 
 });
 }
@@ -83,7 +86,7 @@ function sex_chart(root,years) {
 
 	var pie = d3.layout.pie()
 		.sort(null)
-		.value(function(d) {console.log(d.count); return d.count})
+		.value(function(d) {return d.count})
 
 	var graph = root.append("div")
 		.attr("id", "sex");
@@ -105,7 +108,6 @@ function sex_chart(root,years) {
 	g.append("path")
 		.attr("d",arc)
 		.style("fill", function(d) {
-			console.log(d);
 			var color = "#6A5ACD";
 			if (d.data.name == "F") {
 				color =	 "#ffffff";
@@ -132,6 +134,14 @@ function collapse_speakers(years) {
 		speakers = speakers.concat(years[year].speakers);
 	}
 	return speakers;
+}
+
+function collapse_events(years) {
+	var events = [];
+	for (var year in years) {
+		events = events.concat(years[year].events);
+	}
+	return events;
 }
 
 function top_affiliations(root, years, number) {
@@ -206,6 +216,23 @@ function top_degrees_from(root, years, number) {
 		.text(function(d) { return d.name + " " + d.count})
 }
 
+function topic_list(root, years) {
+	console.log("topic list")
+	var events = collapse_events(years);
+	var topics = {};
+	events.forEach(function(e) {
+		if (e.topic != null) {
+			e.topic.forEach(function(t) {
+				if (topics.hasOwnProperty(t)) {
+					topics[t]++;
+				} else {
+					topics[t] = 1;
+				}
+			});
+		}
+	});
+}
+
 function degree_types(root, years) {
 	var speakers = collapse_speakers(years);
 	var degrees = {};
@@ -219,12 +246,12 @@ function degree_types(root, years) {
 		}
 	});
 
+
 	var data = [];
 	for (var key in degrees) {
 		var count = degrees[key];
 		data.push({name: key, count: count})
 	}
-	console.log(data);
 
 	data.sort(function (a, b) { return b.count - a.count });
 
