@@ -1,5 +1,5 @@
 // Citation: http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
-function getParameterByName(name)
+function get_param(name)
 {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
   var regexS = "[\\?&]" + name + "=([^&#]*)";
@@ -16,11 +16,13 @@ function load_speakers() {
         if (error) return console.warn(error);
         var data = json;
         var content = d3.select("#content");
-        var year = getParameterByName("year");
-        if (getParameterByName("year") != "") {
+        var year = get_param("year");
+        var years = data.years;
+        if (year != "") {
             console.log("Year: " + year);
+            years = [data.years[year]];
         }
-        top_affiliations(content, data.years, 5);
+        top_affiliations(content, years, 5);
 });
 }
 
