@@ -33,9 +33,9 @@ function load_data() {
 		var column2 = d3.select("#column2");
 		top_affiliations(column2, years, 5);
 		degree_types(column1, years);
-	sex_chart(column1, years)
-	top_degrees_from(column2,years,5);
-	topic_list(column1,years);
+		sex_chart(column1, years)
+		top_degrees_from(column2,years,5);
+		topic_list(column1,years);
 
 
 });
@@ -138,7 +138,7 @@ function sex_chart(root,years) {
 			} else {
 				return d.count + " Men";
 			}
-			}});
+			});
 	}
 
 function collapse_speakers(years) {
