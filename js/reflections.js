@@ -11,10 +11,12 @@ function get_param(name)
     return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-function load_speakers() {
+function load_data() {
     d3.json("data.json", function(error, json) {
         if (error) return console.warn(error);
         var data = json;
+	var sidebar = d3.select("#sidebar")
+	year_list(sidebar,data.years);
         var content = d3.select("#content");
         var year = get_param("year");
         var years = data.years;
@@ -23,15 +25,6 @@ function load_speakers() {
             years = [data.years[year]];
         }
         top_affiliations(content, years, 5);
-});
-}
-
-function load_data() {
-	d3.json("data.json", function(error,json){
-		if (error) return console.warn(error);
-		var data = json;
-		var content = d3.select("#sidebar");
-		year_list(content, data.years)
 });
 }
 
