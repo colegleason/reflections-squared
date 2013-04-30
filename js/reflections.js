@@ -178,23 +178,20 @@ function degree_types(root, years) {
     chart = graph.append("svg");
 
     var max_width = 300 // chart width (only for bars, not labels)
+    var bar_height = 20;
     var x = d3.scale.linear()
         .domain([0, d3.max(data, function(d) { return d.count; })])
         .range([0, max_width]);
-
-    var y = d3.scale.ordinal()
-        .domain(d3.range(data.length))
-        .rangeBands([0, 250]);
 
     //Bars
     chart.selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
-        .attr("y", function(d, i) { return y(i);})
+        .attr("y", function(d, i) { return i * bar_height})
         .attr("x", function(d) { return 50 + max_width - x(d.count)})
         .attr("width", function(d) { return x(d.count);})
-        .attr("height", y.rangeBand())
+        .attr("height", bar_height)
         .text(function(d) { return d.name; });
 
     // Bar Chart Labels
@@ -204,7 +201,7 @@ function degree_types(root, years) {
         .append("text")
         .attr("class", "labels")
         .attr("x", 3)
-        .attr("y", function(d, i) { return y(i) + y.rangeBand() / 2; })
+        .attr("y", function(d, i) { return i*bar_height +  bar_height/2})
         .attr("dy", ".35em") // vertical-align: middle
         .text(function(d) { return d.name; });
 
@@ -215,7 +212,7 @@ function degree_types(root, years) {
         .append("text")
         .attr("class", "counts")
         .attr("x", 50 + max_width + 5)
-        .attr("y", function(d, i) { return y(i) + y.rangeBand() / 2; })
+        .attr("y", function(d, i) { return i * bar_height + bar_height /2;})
         .attr("dy", ".35em") // vertical-align: middle
         .text(function(d) { return d.count; });
 }
