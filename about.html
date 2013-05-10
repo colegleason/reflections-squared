@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>reflections squared -- about</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container row">
+      <div class="span12" id="wrap">
+        <div id="header" class="row">
+          <a href="/index.html"><img alt="Reflections Projections Logo" src="/img/logo.png" class="span2"/></a>
+	  <div class="span10">
+          <h1>reflections<sup>2</sup>projections</h1>
+	  <p id="subtitle">reflecting on 18 years of the <a href="http://rp.cs.illinois.edu">reflections | projections</a> conference &middot; <a href="/index.html">back to main page</a></p>
+	  </div>
+        </div>
+        <div class="row">
+	  <div class="span9 offset2">
+<h2>Motivation:</h2>
+<p>
+Our goal was to visualize the history of the reflections | projections conference. Now approaching its 19th year, the conference gathers students and professionals from across the country for a weekend of speaking events, an AI programming competition, and job fairs. We wanted a way to see how r|p has grown and changed throughout the years. Ideally, we will continue to add to the visualization as we consistently collect more data, so we wanted our design to be flexible to changes in the future.
+</p>
+<h2>Intended Audience:</h2>
+<p>
+We had two separate intended audiences for this projected. We wanted to provide the r|p staff with a summary of their conference from previous years in order to help them plan for this year. For example, the staff typically likes to wait a few years before inviting a previous speaker to speak again, but because the staff is made up of college students it is possible that no one remembers. This visualization allows staff to see who spoke when and what recent talk topics have been. It is our hope that this visualization will provide the staff with a clearer image of r|p and decrease the amount of time that they need to spend looking for information.
+We also wanted attendees or those interested in r|p to be able to interact with this visualization. Our goal is to have it up for this year’s conference, and to add more to it before the 20th conference next year.
+</p>
+<h2>The Data: </h2>
+<p>
+The most difficult part of this project was gathering the data. The data was spread across 18 completely differently structured web pages and several wikis. Unfortunately, some of the information has been lost over the years. We collected speakers information, talk title, and abstract when possible. If we did not have the data or were unable to find information such as the speakers degree information, we left it blank. We entered all of the data by hand into a Google Doc Spreadsheet. We read each abstract and determined the talk topics by hand. Because the three of us were adding data, we needed to clean the data by hand by reading through to make sure that we had named things that were supposed to be the same correctly (for example, Systems Programming instead of Systems). In order to make this easier, we created pivot tables to provide histograms for our data. After we had cleaned the data, we created a script to convert our spreadsheet into a JSON file that is then read by our visualization.
+Because of our script and the pivot tables that we created, adding data for future years will be easy. The conference staff simply need to fill out the spreadsheet and run the script that we created.
+</p>
+<h2>What We Hoped to Find: </h2>
+<p>
+We wanted to see the gender balance over the years and trends in talk topic. While we have been on staff, we have noted that the topics of a conference depend heavily on not only new and emerging technologies, but also the interests of staff members. We wondered if this had always been the case, and wanted to see if topics appeared and disappeared in little clusters of years, indicating the graduation of the staff member who was promoting that topic.
+</p>
+<h2>Patterns We Actually Found</h2>
+<p>
+Some of the patterns we found were to be expected.  We noticed that we usually only have 1 or 2 women speakers in a year, if any.  The only year we see a spike in women speakers is 1998 for the Women in Tech panel. This is somewhat due to the nature of the conference being technology focused, but we are still below industry average in our women to men ratio.  This suggests that we need to take a closer look at how we are currently selecting speakers to invite. Another obvious bit of information we noted was that the institution that issued the most degrees to our speakers was the University of Illinois.
+</p>
+<p>
+An interesting pattern that we did find was that some talk topics seem to appear and run steady for a few years. While this may just be due to that topic being popular or new in that time span, we believe that some conference staff member may have been championing a specific field. For an example of this, see Security from 2001 to 2003.
+</p>
+<h2>Photos: </h2>
+<p>Example of compiled data view:</p>
+<img src="/images/overview.png">
+<p>Data from a single year, 1995:</p>
+<img src="/images/1995.png">
+<p>Another single year, this time 2007:</p>
+<img src="/images/2007.png">
+<p>Clicking on items brings up a detailed list on the right.  I clicked on the gender graph in this case:</p>
+<img src="/images/detail-gender.png">
+<p>This is a list of all speakers from 2007 who got degrees from the University of Illinois:</p>
+<img src="/images/detail-degree.png">
+<h2>Check it out yourself!</h2>
+<p>
+The source code for this project can be found at <a href="https://github.com/colegleason/reflections-squared">Github</a>.  We provide instructions there for loading the visualization on your own machine.  However, if you would like to see a live demo, just go to <a href="/index.html">the main page</a>.
+</p>
+	    </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
